@@ -151,3 +151,24 @@
 .btn {
   transition: all 0.3s ease;
 }
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dropdown {
+    position: static;
+    box-shadow: none;
+  }
+
+  .social-icons, .auth-buttons {
+    margin: 0.5rem 0;
+  }
+}

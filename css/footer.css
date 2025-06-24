@@ -80,3 +80,18 @@
     text-align: center;
   }
 }
+@media (max-width: 768px) {
+  .footer {
+    padding: 1.5rem 1rem;
+  }
+
+  .footer-column {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 1.5rem;
+  }
+
+  .footer-column:last-child {
+    border-bottom: none;
+  }
+}

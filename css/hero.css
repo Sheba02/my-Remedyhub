@@ -66,3 +66,16 @@
       gap: 1.2rem;
     }
   }
+  @media (max-width: 768px) {
+    .hero-content {
+      padding: 2rem 1rem;
+    }
+  
+    .hero-stats {
+      gap: 1rem;
+    }
+  
+    .hero-stats .stat-item {
+      margin-bottom: 1rem;
+    }
+  }

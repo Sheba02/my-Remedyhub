@@ -32,3 +32,14 @@
     padding: 0.5rem 1rem;
     border-radius: 5px;
   }
+  @media (max-width: 768px) {
+    .newsletter-form {
+      flex-direction: column;
+      width: 90%;
+    }
+  
+    .newsletter-form input {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
