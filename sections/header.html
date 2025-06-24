@@ -4,10 +4,20 @@
     <div class="logo">RemedyHub</div>
   </div>
 
-  <div class="nav-container">
+  <!-- Hamburger Checkbox (hidden) -->
+  <input type="checkbox" id="hamburger-toggle" class="hamburger-checkbox" />
+
+  <!-- Hamburger Label (visible) -->
+  <label for="hamburger-toggle" class="hamburger">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </label>
+
+  <nav class="nav-container">
     <ul class="nav-links">
-      <li>
-        <a href="#">Menu ▼</a>
+      <li class="dropdown-parent">
+        <button class="menu-label">Menu ▼</button>
         <ul class="dropdown">
           <li><a href="pages/holistic-nutrition.html">Holistic Nutrition</a></li>
           <li><a href="pages/natural-remedies.html">Natural Remedies</a></li>
@@ -25,18 +35,19 @@
       <li><a href="pages/faqs.html">FAQs</a></li>
     </ul>
 
-    <div class="social-icons">
-      <a href="https://twitter.com/remedyhub_" target="_blank" rel="noopener noreferrer">
-        <img src="images/x-twitter.png" alt="Twitter" />
-      </a>
-      <a href="https://instagram.com/remedyhub_" target="_blank" rel="noopener noreferrer">
-        <img src="images/instagram.png" alt="Instagram" />
-      </a>
+    <div class="header-right">
+      <div class="social-icons">
+        <a href="https://twitter.com/remedyhub_" target="_blank" rel="noopener noreferrer">
+          <img src="images/x-twitter.png" alt="Twitter" />
+        </a>
+        <a href="https://instagram.com/remedyhub_" target="_blank" rel="noopener noreferrer">
+          <img src="images/instagram.png" alt="Instagram" />
+        </a>
+      </div>
+      <div class="auth-buttons">
+        <a href="pages/login.html" class="btn btn-primary">Log In</a>
+        <a href="pages/signup.html" class="btn btn-secondary">Sign Up</a>
+      </div>
     </div>
-  </div>
-
-  <div class="auth-buttons">
-    <a href="pages/login.html" class="btn btn-primary">Log In</a>
-    <a href="pages/signup.html" class="btn btn-secondary">Sign Up</a>
-  </div>
+  </nav>
 </header>
