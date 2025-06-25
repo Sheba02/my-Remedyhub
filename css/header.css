@@ -3,7 +3,7 @@
   box-sizing: border-box;
 }
 
-/* Header Layout */
+/* Header container */
 .header {
   background-color: #fff;
   padding: 1rem 2rem;
@@ -35,12 +35,12 @@
   color: #2e7d32;
 }
 
-/* Hide Checkbox */
+/* Hide hamburger checkbox */
 .hamburger-checkbox {
   display: none;
 }
 
-/* Hamburger Icon */
+/* Hamburger styling */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -58,33 +58,43 @@
   transition: all 0.3s ease;
 }
 
-/* Navigation Container */
+/* Navigation container */
 .nav-container {
   display: flex;
   align-items: center;
   gap: 2rem;
 }
 
-.nav-links {
+/* Dropdown menu inside hamburger (hidden on desktop) */
+.nav-dropdown-links {
+  display: none;
   list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Main nav links (always visible on desktop) */
+.nav-main-links {
   display: flex;
+  list-style: none;
   gap: 1rem;
   margin: 0;
   padding: 0;
 }
 
-.nav-links li {
-  position: relative;
-}
-
-.nav-links a {
+.nav-links a,
+.nav-dropdown-links a {
   text-decoration: none;
   color: #333;
   padding: 0.5rem;
   font-weight: 500;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-dropdown-links a:hover,
+.nav-main-links a:hover {
   color: #2e7d32;
 }
 
@@ -104,48 +114,14 @@
   transform: scale(1.2);
 }
 
-/* Auth Buttons */
-.auth-buttons {
+/* Header right section */
+.header-right {
   display: flex;
-  gap: 0.5rem;
-  margin-left: 1rem;
+  align-items: center;
+  gap: 1rem;
 }
 
-.btn {
-  padding: 0.5rem 1rem;
-  border: none;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.btn-primary {
-  background-color: #2e7d32;
-  color: white;
-}
-
-.btn-primary:hover {
-  background-color: #1b5e20;
-  transform: translateY(-2px);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-.btn-secondary {
-  background-color: #81c784;
-  color: #333;
-}
-
-.btn-secondary:hover {
-  background-color: #66bb6a;
-  transform: translateY(-2px);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* Responsive Styles */
+/* Responsive styles */
 @media (max-width: 768px) {
   .header {
     padding: 1rem 1.5rem;
@@ -154,6 +130,11 @@
   /* Show hamburger */
   .hamburger {
     display: flex;
+  }
+
+  /* Hide main links on mobile */
+  .nav-main-links {
+    display: none;
   }
 
   /* Slide-in nav on mobile */
@@ -165,39 +146,29 @@
     max-width: 300px;
     height: 100vh;
     background: #fff;
-    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     padding: 5rem 1.5rem 2rem;
     flex-direction: column;
     gap: 2rem;
     transition: right 0.3s ease;
     z-index: 1050;
     overflow-y: auto;
+    display: flex;
   }
 
-  /* Show nav when checked */
+  /* Show nav container when hamburger checked */
   .hamburger-checkbox:checked ~ .nav-container {
     right: 0;
   }
 
-  /* Stack nav links */
-  .nav-links {
-    flex-direction: column;
-    gap: 1rem;
+  /* Show dropdown menu items inside hamburger */
+  .nav-dropdown-links {
+    display: flex;
   }
 
-  /* Stack social + auth buttons */
+  /* Stack header-right on mobile */
   .header-right {
-    display: flex;
     flex-direction: column;
     gap: 1.5rem;
-  }
-
-  .auth-buttons {
-    margin-left: 0;
-    flex-direction: column;
-  }
-
-  .btn {
-    width: 100%;
   }
 }
